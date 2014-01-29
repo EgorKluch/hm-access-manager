@@ -13,6 +13,7 @@ var AccessManager = function () {
   };
   this.prepareHandlers = {
     'default': function (action, args, next) {
+      if (null === args) args = {};
       next(null, args);
     }
   };
